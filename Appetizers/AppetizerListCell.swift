@@ -28,7 +28,6 @@ struct AppetizerListCell: View {
                     .foregroundColor(.secondary)
                     .fontWeight(.semibold )
             }
-            .padding()
             
             Spacer()
         }

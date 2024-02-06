@@ -18,7 +18,7 @@ final class NetworkManager {
         
     }
     
-    func geetAppetizers(completed: @escaping(Result<[Appetizer], APError>) -> Void) {
+    func getAppetizers(completed: @escaping(Result<[Appetizer], APError>) -> Void) {
         guard let url = URL(string: appetizerURL) else {
             completed(.failure(.invalidURL))
             return
