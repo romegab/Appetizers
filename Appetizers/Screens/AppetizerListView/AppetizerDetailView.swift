@@ -29,40 +29,10 @@ struct AppetizerDetailView: View {
                     .padding()
                 
                 HStack(spacing: 32.0) {
-                    VStack(spacing: 5.0) {
-                        Text("Callories")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.calories)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5.0) {
-                        Text("Carbs")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.carbs) g")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5.0) {
-                        Text("Protein")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.protein) g")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
+                    NutritionView(title: "Calories", amount: "\(appetizer.calories)")
+                    NutritionView(title: "Carbs", amount: "\(appetizer.carbs) g")
+                    NutritionView(title: "Protein", amount: "\(appetizer.protein) g")
                 }
-                
             }
             .padding()
             
@@ -71,13 +41,7 @@ struct AppetizerDetailView: View {
             Button {
                 
             } label: {
-                Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260.0, height: 50.0)
-                    .foregroundColor(.white)
-                    .background(.brandPrimary)
-                    .cornerRadius(10.0)
+                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
             }
             .padding(.bottom, 30.0)
         }
@@ -88,13 +52,7 @@ struct AppetizerDetailView: View {
         .overlay(Button {
             isShowingDetails = false
         } label: {
-            Image(systemName: "xmark")
-                .foregroundColor(.black)
-                .frame(width: 30.0, height: 30.0)
-                .background(Color(.init(white: 1.0, alpha: 0.5)))
-                .cornerRadius(15.0)
-                .padding(EdgeInsets(top: 8.0, leading: 0.0, bottom: 0.0, trailing: 8.0))
-            
+            XDismissButton()
         }, alignment: .topTrailing)
     }
 }
@@ -103,3 +61,22 @@ struct AppetizerDetailView: View {
     AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetails: .constant(false))
 }
 
+
+struct NutritionView: View {
+    
+    let title: String
+    let amount: String
+    
+    var body: some View {
+        VStack(spacing: 5.0) {
+            Text(title)
+                .bold()
+                .font(.caption)
+            
+            Text(amount)
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+                .italic()
+        }
+    }
+}

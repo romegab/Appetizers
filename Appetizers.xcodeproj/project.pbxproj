@@ -27,6 +27,8 @@
 		96B811632B7287C500D52952 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B811622B7287C500D52952 /* Color+Ext.swift */; };
 		96BB4D7C2B73ABEF00880E8E /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */; };
 		96BB4D8B2B73B70B00880E8E /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB4D8A2B73B70B00880E8E /* AppetizerDetailView.swift */; };
+		96BB4D8E2B73D97F00880E8E /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB4D8D2B73D97F00880E8E /* APButton.swift */; };
+		96BB4D902B73DA6B00880E8E /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB4D8F2B73DA6B00880E8E /* XDismissButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		96B811622B7287C500D52952 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		96BB4D8A2B73B70B00880E8E /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		96BB4D8D2B73D97F00880E8E /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		96BB4D8F2B73DA6B00880E8E /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 		96BB4D862B73B40000880E8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				96BB4D8C2B73D97000880E8E /* Buttons */,
 				96BB4D892B73B41500880E8E /* Image */,
 				96BB4D882B73B40F00880E8E /* Cells */,
 				96BB4D872B73B40600880E8E /* UIKit Components */,
@@ -268,6 +273,15 @@
 				96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		96BB4D8C2B73D97000880E8E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				96BB4D8D2B73D97F00880E8E /* APButton.swift */,
+				96BB4D8F2B73DA6B00880E8E /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,10 +416,12 @@
 			files = (
 				96B811552B7136A300D52952 /* Appetizer.swift in Sources */,
 				96B8115B2B72716500D52952 /* APError.swift in Sources */,
+				96BB4D902B73DA6B00880E8E /* XDismissButton.swift in Sources */,
 				96B811572B72634D00D52952 /* AppetizerListCell.swift in Sources */,
 				96B8115D2B727AB100D52952 /* AppetizerListViewModel.swift in Sources */,
 				96B811632B7287C500D52952 /* Color+Ext.swift in Sources */,
 				96B811512B710DE500D52952 /* AccountView.swift in Sources */,
+				96BB4D8E2B73D97F00880E8E /* APButton.swift in Sources */,
 				96B811612B72870600D52952 /* LoadingView.swift in Sources */,
 				96B811272B71014A00D52952 /* AppetizerTabView.swift in Sources */,
 				96B811592B726F7200D52952 /* NetworkManager.swift in Sources */,
