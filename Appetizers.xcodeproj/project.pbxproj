@@ -23,6 +23,8 @@
 		96B8115B2B72716500D52952 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8115A2B72716500D52952 /* APError.swift */; };
 		96B8115D2B727AB100D52952 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8115C2B727AB100D52952 /* AppetizerListViewModel.swift */; };
 		96B8115F2B727CF400D52952 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8115E2B727CF400D52952 /* Alert.swift */; };
+		96B811612B72870600D52952 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B811602B72870600D52952 /* LoadingView.swift */; };
+		96B811632B7287C500D52952 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B811622B7287C500D52952 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		96B8115A2B72716500D52952 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		96B8115C2B727AB100D52952 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		96B8115E2B727CF400D52952 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		96B811602B72870600D52952 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		96B811622B7287C500D52952 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				96B8115A2B72716500D52952 /* APError.swift */,
 				96B8115C2B727AB100D52952 /* AppetizerListViewModel.swift */,
 				96B8115E2B727CF400D52952 /* Alert.swift */,
+				96B811602B72870600D52952 /* LoadingView.swift */,
+				96B811622B7287C500D52952 /* Color+Ext.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -288,7 +294,9 @@
 				96B8115B2B72716500D52952 /* APError.swift in Sources */,
 				96B811572B72634D00D52952 /* AppetizerListCell.swift in Sources */,
 				96B8115D2B727AB100D52952 /* AppetizerListViewModel.swift in Sources */,
+				96B811632B7287C500D52952 /* Color+Ext.swift in Sources */,
 				96B811512B710DE500D52952 /* AccountView.swift in Sources */,
+				96B811612B72870600D52952 /* LoadingView.swift in Sources */,
 				96B811272B71014A00D52952 /* AppetizerTabView.swift in Sources */,
 				96B811592B726F7200D52952 /* NetworkManager.swift in Sources */,
 				96B811252B71014A00D52952 /* AppetizersApp.swift in Sources */,
