@@ -10,8 +10,6 @@ import SwiftUI
 struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
-    @State private var isShowingDetail = false
-    @State private var selectedAppetizer: Appetizer?
     
     var body: some View {
         ZStack {
@@ -20,8 +18,8 @@ struct AppetizerListView: View {
                     AppetizerListCell(appetizer: appetizer)
                         .listRowSeparator(.hidden)
                         .onTapGesture {
-                            isShowingDetail = true
-                            selectedAppetizer = appetizer
+                            viewModel.isShowingDetail = true
+                            viewModel.selectedAppetizer = appetizer
                         }
                 }
                 .listStyle(PlainListStyle())
@@ -30,11 +28,11 @@ struct AppetizerListView: View {
             .onAppear {
                 viewModel.getAppetizers()
             }
-            .blur(radius: isShowingDetail ? 20.0 : 0.0)
-            .disabled(isShowingDetail)
+            .blur(radius: viewModel.isShowingDetail ? 20.0 : 0.0)
+            .disabled(viewModel.isShowingDetail)
             
-            if isShowingDetail {
-                AppetizerDetailView(appetizer: selectedAppetizer ?? MockData.sampleAppetizer, isShowingDetails: $isShowingDetail)
+            if viewModel.isShowingDetail {
+                AppetizerDetailView(appetizer: viewModel.selectedAppetizer ?? MockData.sampleAppetizer, isShowingDetails: $viewModel.isShowingDetail)
             }
             
             if viewModel.isLoading {
