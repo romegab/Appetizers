@@ -25,6 +25,7 @@
 		96B8115F2B727CF400D52952 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8115E2B727CF400D52952 /* Alert.swift */; };
 		96B811612B72870600D52952 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B811602B72870600D52952 /* LoadingView.swift */; };
 		96B811632B7287C500D52952 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B811622B7287C500D52952 /* Color+Ext.swift */; };
+		96BB4D7C2B73ABEF00880E8E /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		96B8115E2B727CF400D52952 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		96B811602B72870600D52952 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		96B811622B7287C500D52952 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,21 +118,13 @@
 		96B811232B71014A00D52952 /* Appetizers */ = {
 			isa = PBXGroup;
 			children = (
+				96BB4D852B73B3DB00880E8E /* Model */,
+				96BB4D812B73B38D00880E8E /* Utilities */,
+				96BB4D862B73B40000880E8E /* Views */,
+				96BB4D7D2B73B34300880E8E /* Screens */,
 				96B811242B71014A00D52952 /* AppetizersApp.swift */,
-				96B811262B71014A00D52952 /* AppetizerTabView.swift */,
 				96B811282B71014C00D52952 /* Assets.xcassets */,
 				96B8112A2B71014C00D52952 /* Preview Content */,
-				96B8114E2B710DDA00D52952 /* AppetizerListView.swift */,
-				96B811502B710DE500D52952 /* AccountView.swift */,
-				96B811522B710DEF00D52952 /* OrderView.swift */,
-				96B811542B7136A300D52952 /* Appetizer.swift */,
-				96B811562B72634D00D52952 /* AppetizerListCell.swift */,
-				96B811582B726F7200D52952 /* NetworkManager.swift */,
-				96B8115A2B72716500D52952 /* APError.swift */,
-				96B8115C2B727AB100D52952 /* AppetizerListViewModel.swift */,
-				96B8115E2B727CF400D52952 /* Alert.swift */,
-				96B811602B72870600D52952 /* LoadingView.swift */,
-				96B811622B7287C500D52952 /* Color+Ext.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -158,6 +152,119 @@
 				96B811412B71014C00D52952 /* AppetizersUITestsLaunchTests.swift */,
 			);
 			path = AppetizersUITests;
+			sourceTree = "<group>";
+		};
+		96BB4D7D2B73B34300880E8E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				96B811262B71014A00D52952 /* AppetizerTabView.swift */,
+				96BB4D802B73B35A00880E8E /* OrderView */,
+				96BB4D7F2B73B35200880E8E /* AccountView */,
+				96BB4D7E2B73B34A00880E8E /* AppetizerListView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		96BB4D7E2B73B34A00880E8E /* AppetizerListView */ = {
+			isa = PBXGroup;
+			children = (
+				96B8114E2B710DDA00D52952 /* AppetizerListView.swift */,
+				96B8115C2B727AB100D52952 /* AppetizerListViewModel.swift */,
+			);
+			path = AppetizerListView;
+			sourceTree = "<group>";
+		};
+		96BB4D7F2B73B35200880E8E /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				96B811502B710DE500D52952 /* AccountView.swift */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		96BB4D802B73B35A00880E8E /* OrderView */ = {
+			isa = PBXGroup;
+			children = (
+				96B811522B710DEF00D52952 /* OrderView.swift */,
+			);
+			path = OrderView;
+			sourceTree = "<group>";
+		};
+		96BB4D812B73B38D00880E8E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				96BB4D842B73B3BA00880E8E /* Alert */,
+				96BB4D832B73B39F00880E8E /* Extentions */,
+				96BB4D822B73B39500880E8E /* Managers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		96BB4D822B73B39500880E8E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				96B811582B726F7200D52952 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		96BB4D832B73B39F00880E8E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				96B811622B7287C500D52952 /* Color+Ext.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		96BB4D842B73B3BA00880E8E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				96B8115A2B72716500D52952 /* APError.swift */,
+				96B8115E2B727CF400D52952 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		96BB4D852B73B3DB00880E8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96B811542B7136A300D52952 /* Appetizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96BB4D862B73B40000880E8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96BB4D892B73B41500880E8E /* Image */,
+				96BB4D882B73B40F00880E8E /* Cells */,
+				96BB4D872B73B40600880E8E /* UIKit Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96BB4D872B73B40600880E8E /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				96B811602B72870600D52952 /* LoadingView.swift */,
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		96BB4D882B73B40F00880E8E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96B811562B72634D00D52952 /* AppetizerListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96BB4D892B73B41500880E8E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				96BB4D7B2B73ABEF00880E8E /* RemoteImage.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +406,7 @@
 				96B811612B72870600D52952 /* LoadingView.swift in Sources */,
 				96B811272B71014A00D52952 /* AppetizerTabView.swift in Sources */,
 				96B811592B726F7200D52952 /* NetworkManager.swift in Sources */,
+				96BB4D7C2B73ABEF00880E8E /* RemoteImage.swift in Sources */,
 				96B811252B71014A00D52952 /* AppetizersApp.swift in Sources */,
 				96B8115F2B727CF400D52952 /* Alert.swift in Sources */,
 				96B8114F2B710DDA00D52952 /* AppetizerListView.swift in Sources */,
