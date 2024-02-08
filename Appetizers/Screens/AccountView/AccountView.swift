@@ -9,27 +9,22 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
-    @State private var birthdate = Date()
-    @State private var extraNapkins = false
-    @State private var frequentRefills = false
+    @StateObject private var viewModel = AccountViewModel()
     
     var body: some View {
         NavigationView {
-            Form {
+            Form() {
                 Section {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
+                    TextField("First Name", text: $viewModel.user.firstName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .autocorrectionDisabled()
-                    DatePicker("Birthday", selection: $birthdate, displayedComponents: .date)
+                    DatePicker("Birthday", selection: $viewModel.user.birthdate, displayedComponents: .date)
                     
                     Button {
-                        print("save")
+                        viewModel.saveChanges()
                     } label: {
                         Text("Save Changes")
                     }
@@ -38,8 +33,8 @@ struct AccountView: View {
                 }
                 
                 Section {
-                    Toggle("Extra Napkins", isOn: $extraNapkins)
-                    Toggle("Frequent Refills", isOn: $frequentRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Frequent Refills", isOn: $viewModel.user.frequentRefills)
                         
                 }header: {
                     Text("Requests")
@@ -47,7 +42,13 @@ struct AccountView: View {
                 .toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
 
             }
+            .onAppear {
+                viewModel.retrieveUser()
+            }
             .navigationTitle("🤣 Account")
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         }
     }
 }
