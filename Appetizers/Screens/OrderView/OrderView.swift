@@ -13,21 +13,27 @@ struct OrderView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(appetizers) { appetizer in
-                        AppetizerListCell(appetizer: appetizer)
+            ZStack {
+                VStack {
+                    List {
+                        ForEach(appetizers) { appetizer in
+                            AppetizerListCell(appetizer: appetizer)
+                        }
+                        .onDelete(perform: deleteItems)
                     }
-                    .onDelete(perform: deleteItems)
+                    .listStyle(PlainListStyle())
+                    
+                    Button {
+                        print("hello")
+                    } label: {
+                        APButton(title: "test")
+                    }
+                    .padding(.bottom, 25)
                 }
-                .listStyle(PlainListStyle())
                 
-                Button {
-                    print("hello")
-                } label: {
-                    APButton(title: "test")
+                if appetizers.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in order. \nPlease add appetizer.")
                 }
-                .padding(.bottom, 25)
             }
             .navigationTitle("🔖 Orders")
         }
